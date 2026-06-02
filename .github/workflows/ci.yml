@@ -1,17 +1,17 @@
 name: CI
 
-# Test and lint on pull requests, the default branch, tags,
-# and branches starting with `develop`.
+# Test and lint on pull requests, the default branch and tags
 on:
   pull_request:
   push:
     branches:
       - main
     tags:
+      - '*'
 
 jobs:
   test:
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-latest
     strategy:
       fail-fast: false
       matrix:
